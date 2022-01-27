@@ -6,7 +6,11 @@ namespace DataStructures
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to Single Linked List UC");
+            LinkedList list = new LinkedList();
+            list.AddLast(56);
+            list.AddLast(30);
+            list.AddLast(70);
+            list.Display();
         }
     }
 }
