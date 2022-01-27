@@ -5,27 +5,16 @@ using System.Text;
 namespace DataStructures
 {
     /// <summary>
-    /// simple linked list uc1 adding last to the lsit
+    /// simple linked list uc1 adding first to the lsit
     /// </summary>
     class LinkedList
     {
         Node head;
-        public void AddLast(int d)
+        public void AddFirst(int d)
         {
             Node nodeobj = new Node(d);
-            if (this.head == null)
-            {
-                this.head = nodeobj;
-            }
-            else
-            {
-                Node temp = this.head;
-                while(temp.next!=null)
-                {
-                    temp = temp.next;
-                }
-                temp.next = nodeobj;
-            }
+            nodeobj.next = this.head;
+            this.head = nodeobj;
             Console.WriteLine("{0} inserted into Linked List",nodeobj.data);
         }
         public void Display()
