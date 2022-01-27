@@ -10,12 +10,23 @@ namespace DataStructures
     class LinkedList
     {
         Node head;
-        public void AddFirst(int d)
+        public void Append(int d)
         {
             Node nodeobj = new Node(d);
-            nodeobj.next = this.head;
-            this.head = nodeobj;
-            Console.WriteLine("{0} inserted into Linked List",nodeobj.data);
+            if (this.head == null)
+            {
+                this.head = nodeobj;
+            }
+            else
+            {
+                Node temp = this.head;
+                while (temp.next != null)
+                {
+                    temp = temp.next;
+                }
+                temp.next = nodeobj;
+            }
+            Console.WriteLine("{0} inserted into Linked List", nodeobj.data);
         }
         public void Display()
         {

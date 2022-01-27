@@ -7,9 +7,10 @@ namespace DataStructures
         static void Main(string[] args)
         {
             LinkedList list = new LinkedList();
-            list.AddFirst(70);
-            list.AddFirst(30);
-            list.AddFirst(56);
+            list.Append(56);
+            list.Append(30);
+            list.Append(70);
+            Console.WriteLine("LinkedList Sequence using append:");
             list.Display();
         }
     }
