@@ -42,22 +42,17 @@ namespace DataStructures
                 temp = temp.next;
             }
         }
-
-        public Node DeleteLastNode()
+        public Node Search(int value)  
         {
-          if(head==null || head.next == null)
+            while (this.head!= null)
             {
-                Console.WriteLine("No data");
-                return null;
+                if (this.head.data==value)
+                {
+                    Console.WriteLine("data exists"+this.head.data);
+                }
+                this.head = this.head.next;
             }
-            Node temp = this.head;
-            while(temp.next.next!=null)
-            {
-                temp = temp.next;
-            }
-            temp.next = null;
-            return temp;
-           
+            return null;
         }
     }
 }
