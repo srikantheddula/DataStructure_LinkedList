@@ -8,8 +8,8 @@ namespace DataStructures
         {
             LinkedList list = new LinkedList();
             list.Append(56);
-            list.Append(30);
             list.Append(70);
+            list.insertBetween(list.head,30);
             Console.WriteLine("LinkedList Sequence using append:");
             list.Display();
         }
