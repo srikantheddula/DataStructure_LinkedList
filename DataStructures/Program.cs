@@ -10,10 +10,10 @@ namespace DataStructures
             list.Append(56);
             list.Append(30);
             list.Append(70);
-            Console.WriteLine("LinkedList Sequence using append:");
+            Console.WriteLine("before LinkedList Sequence using append:");
             list.Display();
-            Console.WriteLine("\nafter deletion");
-            list.Pop();          
+            Console.WriteLine("\nafter deletion of last element");
+            list.DeleteLastNode();          
             list.Display();
         }
     }

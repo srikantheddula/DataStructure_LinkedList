@@ -5,7 +5,7 @@ using System.Text;
 namespace DataStructures
 {
     /// <summary>
-    /// simple linked list uc1 adding first to the lsit
+    /// simple linked list uc6 deletenode from last
     /// </summary>
     class LinkedList
     {
@@ -43,14 +43,21 @@ namespace DataStructures
             }
         }
 
-        public Node Pop()
+        public Node DeleteLastNode()
         {
-            if (this.head == null)
+          if(head==null || head.next == null)
             {
+                Console.WriteLine("No data");
                 return null;
             }
-            this.head = this.head.next;
-            return this.head;
+            Node temp = this.head;
+            while(temp.next.next!=null)
+            {
+                temp = temp.next;
+            }
+            temp.next = null;
+            return temp;
+           
         }
     }
 }
