@@ -28,20 +28,7 @@ namespace DataStructures
             }
             Console.WriteLine("{0} inserted into Linked List", nodeobj.data);
         }
-        public void insertBetween(Node prev_node,
-                        int new_data)
-        {
-            /* 1. Check if the given Node is null */
-            if (prev_node == null)
-            {
-                Console.WriteLine("The given previous node" +
-                                        " cannot be null");
-                return;
-            }
-            Node nodeobj = new Node(new_data);
-            nodeobj.next = prev_node.next;
-            prev_node.next = nodeobj;
-        }
+        
         public void Display()
         {
             Node temp = this.head;
@@ -54,6 +41,16 @@ namespace DataStructures
                 Console.Write(temp.data + " ");
                 temp = temp.next;
             }
+        }
+
+        public Node Pop()
+        {
+            if (this.head == null)
+            {
+                return null;
+            }
+            this.head = this.head.next;
+            return this.head;
         }
     }
 }
